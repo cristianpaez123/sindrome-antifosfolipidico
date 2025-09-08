@@ -1,0 +1,74 @@
+<section id="introduccion" class="intro-section">
+    <h2 class="intro-title">Síndrome Antifosfolipídico</h2>
+
+    <!-- Definición -->
+    <div class="intro-definition">
+        <div>
+            <h3><span class="material-icons">info</span> Definición</h3>
+            <p>
+                El síndrome antifosfolipídico (SAF) es un grupo de enfermedades autoinmunes raras causadas por
+                anticuerpos antifosfolipídicos que se asocian con trombosis arterial o venosa.
+            </p>
+        </div>
+        <div>
+            <img src="assets/images/doctor.jpg" alt="Definición SAF" />
+        </div>
+    </div>
+
+    <!-- Complicaciones -->
+    <div class="intro-complications">
+        <h3><span class="material-icons">warning</span> Complicaciones</h3>
+        <div class="complications-grid">
+            <div *ngFor="let c of complications" class="complication-card">
+                <span class="material-icons" style="font-size: 3rem; color: #1E88E5;">{{ c.icon }}</span>
+                <h4>{{ c.title }}</h4>
+                <p>{{ c.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- epidemiologia-->
+
+    <section id="epidemiologia" class="epidemiology-section">
+        <h2 class="epidemiology-title">
+            <span class="material-icons">pie_chart</span> Epidemiología
+        </h2>
+
+        <div class="epidemiology-grid">
+            <div class="epidemiology-card">
+                <span class="material-icons card-icon">trending_up</span>
+                <h3>Incidencia</h3>
+                <p>Incidencia entre 1-2 casos por 100.000 habitantes.</p>
+            </div>
+
+            <div class="epidemiology-card">
+                <span class="material-icons card-icon">groups</span>
+                <h3>Prevalencia</h3>
+                <p>Prevalencia 40-50 casos por 100.000 habitantes.</p>
+            </div>
+
+            <div class="epidemiology-card">
+                <span class="material-icons card-icon">wc</span>
+                <h3>Proporción por Género</h3>
+                <p>Es más común en mujeres, proporción 2:1.</p>
+            </div>
+
+            <div class="epidemiology-card">
+                <span class="material-icons card-icon">description</span>
+                <h3>Manifestaciones Cutáneas<br />(Cervera et al.)</h3>
+                <p>
+                    Cervera et al informaron lesiones cutáneas como manifestación inicial en el
+                    <strong class="highlight">29%</strong> de los 1000 casos y en el transcurso de la enfermedad del
+                    <strong class="highlight">40%</strong>.
+                </p>
+            </div>
+
+            <div class="epidemiology-card wide-card">
+                <span class="material-icons card-icon">description</span>
+                <h3>Manifestaciones Cutáneas<br />(Frances et al.)</h3>
+                <p>
+                    Frances et al describe que el <strong class="highlight">31%</strong> y <strong
+                        class="highlight">49%</strong> de 200
+                    pacientes con SAF, desarrollaron lesiones cutáneas como manifestación inicial.
+                </p>
+            </div>

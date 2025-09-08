@@ -1,0 +1,209 @@
+/* Sección principal */
+.intro-section {
+  padding: 4rem 2rem;
+  background-color: #f9fafb; /* gris claro */
+}
+
+/* Título principal */
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1d4ed8; /* azul principal */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Definición */
+.intro-definition {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background-color: #e3f2fd; /* azul claro */
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .intro-definition {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Contenedor: texto + imagen en fila */
+.intro-definition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* espacio entre texto e imagen */
+  
+}
+
+/* Título */
+.intro-definition h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1d4ed8;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Párrafo */
+.intro-definition p {
+  color: #374151;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Imagen */
+.intro-definition img {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 700px;  /* controla tamaño máximo */
+  width: 100%;       /* ocupa hasta ese máximo */
+  height: auto;      /* mantiene proporción */
+  object-fit: cover;
+}
+/* Complicaciones */
+.intro-complications {
+  background-color: #f3f4f6;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.intro-complications h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1d4ed8;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.complications-grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .complications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .complications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.complication-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.complication-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
+}
+
+.complication-card p {
+  color: #374151;
+  font-size: 1.2rem;
+}
+
+/* Epidemiología */
+.epidemiology-section {
+  background-color: #eaf4ff; /* Azul muy claro */
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+/* Título */
+.epidemiology-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1d4ed8;
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Grid */
+.epidemiology-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .epidemiology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .epidemiology-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.epidemiology-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.epidemiology-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Íconos */
+.card-icon {
+  font-size: 2.5rem;
+  color: #1e88e5;
+  margin-bottom: 0.75rem;
+}
+
+/* Título dentro de card */
+.epidemiology-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+/* Texto */
+.epidemiology-card p {
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* Resaltado de porcentajes */
+.highlight {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+.wide-card {
+  grid-column: span 2;
+}
