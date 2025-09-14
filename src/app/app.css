@@ -1,0 +1,4 @@
+/* Estilos globales para dar espacio debajo del navbar fijo */
+.content {
+  padding-top: 80px; /* 👈 ajusta este valor al alto real de tu navbar */
+}

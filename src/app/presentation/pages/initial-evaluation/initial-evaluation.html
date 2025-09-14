@@ -1,0 +1,92 @@
+<h1>Evaluación inicial</h1>
+
+<div class="tabs">
+  <button
+    class="tab-button"
+    [class.active]="isActive('historia')"
+    (click)="setActive('historia')"
+  >
+    Historia clínica detallada
+  </button>
+
+  <button
+    class="tab-button"
+    [class.active]="isActive('factores')"
+    (click)="setActive('factores')"
+  >
+    Factores de riesgo trombótico
+  </button>
+
+  <button
+    class="tab-button"
+    [class.active]="isActive('comorbilidades')"
+    (click)="setActive('comorbilidades')"
+  >
+    Comorbilidades
+  </button>
+
+  <button
+    class="tab-button"
+    [class.active]="isActive('lesiones')"
+    (click)="setActive('lesiones')"
+  >
+    Exploración de lesiones
+  </button>
+
+  <button
+    class="tab-button"
+    [class.active]="isActive('sintomas')"
+    (click)="setActive('sintomas')"
+  >
+    Síntomas
+  </button>
+</div>
+
+<!-- Contenidos -->
+<div class="tab-content" *ngIf="isActive('historia')">
+  <h3>Historia clínica detallada</h3>
+  <p><b>Objetivo:</b> Identificar antecedentes trombóticos, eventos obstétricos, síntomas sistémicos y exposición a factores de riesgo.</p>
+  <ul>
+    <li>Indagar antecedentes personales y familiares de trombosis arterial o venosa...</li>
+    <li>Documentar inicio, evolución y características de las lesiones cutáneas.</li>
+    <li>Revisar laboratorios y exámenes diagnósticos previos.</li>
+  </ul>
+</div>
+
+<div class="tab-content" *ngIf="isActive('factores')">
+  <h3>Factores de riesgo trombótico</h3>
+  <p><b>Objetivo:</b> Evaluar oportunamente factores de riesgo adicionales para estratificar el riesgo y orientar el manejo.</p>
+  <ul>
+    <li>Solicitar exámenes de laboratorio para confirmar o descartar anticuerpos antifosfolipídicos.</li>
+    <li>Indagar exposiciones: tabaquismo, obesidad, anticonceptivos, embarazo, cirugías recientes.</li>
+    <li>Valorar enfermedades asociadas: HTA, dislipidemia, trombofilia hereditaria.</li>
+  </ul>
+</div>
+
+<div class="tab-content" *ngIf="isActive('comorbilidades')">
+  <h3>Comorbilidades</h3>
+  <p><b>Objetivo:</b> Determinar la relación entre manifestaciones cutáneas y enfermedades autoinmunes asociadas.</p>
+  <ul>
+    <li>Explorar enfermedades autoinmunes: lupus, artritis reumatoide, esclerodermia, vasculitis.</li>
+    <li>Revisar condiciones asociadas: nefropatía, HTA, diabetes, dislipidemia.</li>
+  </ul>
+</div>
+
+<div class="tab-content" *ngIf="isActive('lesiones')">
+  <h3>Exploración de lesiones</h3>
+  <p><b>Objetivo:</b> Realizar una caracterización precisa de las lesiones cutáneas.</p>
+  <ul>
+    <li>Examen físico minucioso, especialmente en miembros inferiores.</li>
+    <li>Identificar lesiones típicas: livedo reticularis, úlceras, necrosis, púrpura.</li>
+    <li>Documentar localización, extensión, morfología, bordes y evolución.</li>
+  </ul>
+</div>
+
+<div class="tab-content" *ngIf="isActive('sintomas')">
+  <h3>Síntomas</h3>
+  <p><b>Objetivo:</b> Orientar sobre posibles complicaciones agudas o sistémicas asociadas al SAF.</p>
+  <ul>
+    <li>Indagar dolor, fiebre, malestar general, síntomas neurológicos, cardiovasculares o renales.</li>
+    <li>Evaluar signos de alarma: fiebre persistente, lesiones extensas o dolorosas.</li>
+  </ul>
+</div>

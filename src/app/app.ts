@@ -1,16 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './presentation/components/navbar/navbar';
-import { Hero } from './presentation/pages/hero/hero';
-import { IntroductionComponent } from "./presentation/pages/introduction/introduction";
-
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Hero, IntroductionComponent],
+  standalone: true,
+  imports: [RouterOutlet, Navbar], // 👈 solo Navbar y RouterOutlet
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('mi-proyecto-web');
-}
+export class App {}

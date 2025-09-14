@@ -1,13 +1,25 @@
 <nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
   <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-      <ul class="flex space-x-6 font-medium text-gray-700">
-      <li><a href="#inicio" class="hover:text-blue-600">Inicio</a></li>
-      <li><a href="#Evaluación inicial" class="hover:text-blue-600">Evaluación inicial</a></li>
-      <li><a href="#Diagnóstico diferencial" class="hover:text-blue-600">Diagnóstico diferencial</a></li>
-      <li><a href="#Manifestaciones cutáneas" class="hover:text-blue-600">Manifestaciones cutáneas</a></li>
-      <li><a href="#Protocolo de manejo local" class="hover:text-blue-600">Protocolo de manejo local</a></li>
-      <li><a href="#Manejo sistémico" class="hover:text-blue-600">Manejo sistémico</a></li>
-      <li><a href="#Educación y seguimiento" class="hover:text-blue-600">Educación y seguimiento</a></li>
+    <!-- Logo -->
+    <a routerLink="/" class="font-bold text-xl text-blue-600">MiSitio</a>
+
+    <!-- Botón hamburguesa (solo móvil) -->
+    <button class="md:hidden flex items-center px-3 py-2 border rounded text-gray-700 border-gray-400"
+            (click)="toggleMenu()">
+      <svg class="fill-current h-6 w-6" viewBox="0 0 20 20">
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+      </svg>
+    </button>
+
+    <!-- Menú -->
+    <ul [class.hidden]="menuClosed" class="md:flex space-x-6 font-medium text-gray-700">
+      <li><a routerLink="/" class="hover:text-blue-600">Inicio</a></li>
+      <li><a routerLink="/initial-evaluation" class="hover:text-blue-600">Evaluación inicial</a></li>
+      <li><a routerLink="/diagnostico" class="hover:text-blue-600">Diagnóstico diferencial</a></li>
+      <li><a routerLink="/skin-manifestations" class="hover:text-blue-600">Manifestaciones cutáneas</a></li>
+      <li><a routerLink="/protocolo" class="hover:text-blue-600">Protocolo de manejo local</a></li>
+      <li><a routerLink="/sistemico" class="hover:text-blue-600">Manejo sistémico</a></li>
+      <li><a routerLink="/seguimiento" class="hover:text-blue-600">Educación y seguimiento</a></li>
     </ul>
   </div>
 </nav>
