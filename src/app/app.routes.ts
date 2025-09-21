@@ -4,7 +4,7 @@ import { InitialEvaluationComponent } from './presentation/pages/initial-evaluat
 import { SkinManifestations } from './presentation/pages/skin-manifestations/skin-manifestations';
 import {LocalManagementProtocol} from './presentation/pages/local-management-protocol/local-management-protocol'
 import {SystemicManagement} from './presentation/pages/systemic-management/systemic-management'
-
+import {EducationMonitoring} from './presentation/pages/education-monitoring/education-monitoring'
 
 
 export const routes: Routes = [
@@ -33,4 +33,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./presentation/pages/systemic-management/systemic-management')
         .then(m => m.SystemicManagement)
+  },
+   {
+    path: 'education-monitoring',
+    loadComponent: () =>
+      import('./presentation/pages/education-monitoring/education-monitoring')
+        .then(m => m.EducationMonitoring)
   }];
