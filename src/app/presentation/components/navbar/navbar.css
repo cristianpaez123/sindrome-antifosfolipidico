@@ -1,82 +1,67 @@
-.navbar {
+/* Navbar general */
+nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra de elevación */
   z-index: 1000;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Contenedor */
+nav .max-w-7xl {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #2563eb;
-  text-decoration: none;
+  display: flex;
+  justify-content: center; /* ⬅️ centramos el menú */
+  align-items: center;
+  padding: 18px 20px; /* más padding arriba y abajo */
 }
 
 /* Menú */
-ul {
+nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 28px; /* separación entre elementos */
+  margin: 0;
+  padding: 0;
 }
 
-ul li a {
+/* Items del menú */
+nav ul li a {
   text-decoration: none;
-  color: #374151;
+  color: #374151; /* gris oscuro */
+  font-size: 1.1rem; /* tamaño de letra */
+  font-weight: 500;
+  padding: 6px 0;
+  transition: color 0.3s ease;
 }
 
-ul li a:hover {
-  color: #2563eb;
-}
-
-/* Botón hamburguesa */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #374151;
+nav ul li a:hover {
+  color: #2563eb; /* azul al pasar el mouse */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+  nav .max-w-7xl {
+    justify-content: flex-start; /* en móvil mejor alinearlo a la izquierda */
   }
 
-  ul {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: white;
-    width: 200px;
+  nav ul {
     flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    gap: 14px;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     display: none;
   }
 
-  ul.open {
+  nav ul.open {
     display: flex;
   }
 }

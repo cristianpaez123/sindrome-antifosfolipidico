@@ -1,87 +1,80 @@
 /* Contenedor principal */
 .tabs-container {
   padding: 2rem;
-  background-color: #f9fafb; /* fondo general gris muy claro */
+  background-color: #f9fafb;
   border-radius: 1rem;
+
+  max-width: 1200px;     /* ancho máximo */
+  margin: 0 auto;        /* centra horizontalmente */
 }
 
 /* Barra de pestañas */
 .tabs-header {
   display: flex;
-  gap: 1rem;
+  justify-content: center; /* centra los botones */
+  align-items: center;
+  gap: 1.5rem;             /* espacio entre botones */
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  justify-content: center;
 }
 
 /* Botones de pestañas */
 .tab-button {
-  background-color: #e3f2fd; /* azul muy claro */
-  color: #1d4ed8; /* azul principal */
+  background-color: #e3f2fd;
+  color: #1d4ed8;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
+  min-width: 200px; /* asegura que todos los botones tengan ancho uniforme */
 }
 
 .tab-button:hover {
-  background-color: #1e88e5; /* azul acento */
-  color: #ffffff; /* texto blanco */
+  background-color: #1e88e5;
+  color: #ffffff;
 }
 
 .tab-button.active {
-  background-color: #1d4ed8; /* azul fuerte */
+  background-color: #1d4ed8;
   color: #ffffff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Contenido de cada sección */
+/* Contenido */
 .tab-content {
-  background: #ffffff; /* fondo blanco */
+  background: #ffffff;
   border-radius: 0.75rem;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: #374151; /* gris oscuro para texto */
+  color: #374151;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
 
-/* Subtítulos dentro del contenido */
-.tab-content h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #1d4ed8; /* azul principal */
-  margin-bottom: 1rem;
-}
-
-/* Párrafos */
-.tab-content p {
-  margin-bottom: 1rem;
-}
-
-/* Listas */
-.tab-content ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  list-style: disc;
-}
-
-.tab-content li {
-  margin-bottom: 0.5rem;
+  max-width: 900px;
+  margin: 0 auto 2rem auto;   /* centrado y con espacio debajo */
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .tabs-header {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    gap: 1rem;
   }
 
   .tab-button {
     width: 100%;
-    text-align: center;
+    max-width: 300px; /* evita que se estiren demasiado */
   }
+}
+.tabs {
+  display: flex;
+  justify-content: center; /* centra los botones */
+  align-items: center;
+  gap: 1.5rem; /* espacio entre botones */
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
