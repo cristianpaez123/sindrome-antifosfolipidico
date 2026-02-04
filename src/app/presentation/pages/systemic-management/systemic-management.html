@@ -1,29 +1,112 @@
-<section class="infographic-section">
-    <!-- Texto descriptivo (bloque) -->
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p>
-            El manejo con terapia anticoagulante es el pilar fundamental para prevenir y tratar la trombosis subyacentes
-            que causa varias manifestaciones cutáneas, en algunos casos se recomienda añadir corticosteroides
-            sistémicos, inmunosupresores o terapias biológicas las cuales han demostrado eficacia en manifestaciones
-            cutáneas difíciles de tratar, además el uso de plasmaféresis puede considerarse en casos de necrosis severa
-            cuando hay resistencia a la anticoagulación convencional
+<section class="treatment-section" id="tratamiento">
 
-            La evidencia resalta la importancia de adaptar el tratamiento según la gravedad, la respuesta del paciente y
-            la presencia de otras comorbilidades ya que no existe un protocolo único y la experiencia clínica sigue
-            siendo clave en la toma de decisiones, sin embargo, la Sociedad Española de Reumatología sobre el Síndrome
-            antifosfolipídico primario establece recomendaciones en el diagnóstico, evaluación y tratamiento
-            anticoagulante en situaciones especiales en algoritmos de atención.
+  <h2 class="treatment-title">
+    <span class="material-icons">medical_services</span>
+    Tratamiento y toma de decisiones clínicas
+  </h2>
 
-        </p>
+  <div class="treatment-grid">
+
+    <!-- MAPA CONCEPTUAL 1 (IMAGEN) -->
+    <div class="treatment-card map-card">
+      <h3>
+        <span class="material-icons">schema</span>
+        Abordaje terapéutico
+      </h3>
+
+      <img
+        src="assets/images/mapa1.png"
+        alt="Mapa conceptual abordaje terapéutico"
+        class="concept-map map-clickable"
+        (click)="openMap('image1')"
+      />
     </div>
 
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro7.png" alt="Mockup informativo SAF">
+    <!-- TEXTO EXPLICATIVO -->
+    <div class="treatment-card text-card">
+      <h3>
+        <span class="material-icons">description</span>
+        Tratamiento farmacológico
+      </h3>
+
+      <p>
+        El manejo con terapia anticoagulante constituye el pilar fundamental para la
+        prevención y el tratamiento de la trombosis subyacente, responsable de diversas
+        manifestaciones cutáneas.
+      </p>
+
+      <p>
+        En algunos casos, se recomienda la adición de corticosteroides sistémicos,
+        inmunosupresores o terapias biológicas, las cuales han demostrado eficacia en
+        manifestaciones cutáneas de difícil manejo.
+      </p>
+
+      <p>
+        Asimismo, el uso de plasmaféresis puede considerarse en situaciones de necrosis
+        severa cuando existe resistencia a la anticoagulación convencional.
+      </p>
     </div>
 
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro8.png" alt="Mockup informativo SAF">
+    <!-- TEXTO / CONCLUSIONES -->
+    <div class="treatment-card text-card conclusion-card">
+      <h3>
+        <span class="material-icons">insights</span>
+        Conclusiones clínicas
+      </h3>
+
+      <p>
+        La evidencia destaca la importancia de adaptar el tratamiento según la gravedad
+        del cuadro, la respuesta individual del paciente y la presencia de comorbilidades,
+        ya que no existe un protocolo terapéutico único.
+      </p>
+
+      <p>
+        La experiencia clínica continúa siendo clave en la toma de decisiones. No obstante,
+        la Sociedad Española de Reumatología establece recomendaciones para el diagnóstico,
+        la evaluación y el tratamiento anticoagulante en situaciones especiales mediante
+        algoritmos de atención.
+      </p>
     </div>
 
+    <!-- MAPA CONCEPTUAL 2 (IMAGEN) -->
+    <div class="treatment-card map-card">
+      <h3>
+        <span class="material-icons">account_tree</span>
+        Algoritmo de decisión
+      </h3>
 
+      <img
+        src="assets/images/mapa2.png"
+        alt="Mapa conceptual algoritmo de tratamiento"
+        class="concept-map map-clickable"
+        (click)="openMap('image2')"
+      />
+    </div>
+
+  </div>
 </section>
+
+<!-- MODAL -->
+<div class="map-modal" *ngIf="isModalOpen" (click)="closeMap()">
+  <div class="map-modal-content" (click)="$event.stopPropagation()">
+
+    <span class="material-icons close-btn" (click)="closeMap()">close</span>
+
+    <!-- MAPA 1 GRANDE -->
+    <img
+      *ngIf="activeMap === 'image1'"
+      src="assets/images/mapa1.png"
+      alt="Mapa 1 ampliado"
+      class="modal-image"
+    />
+
+    <!-- MAPA 2 GRANDE -->
+    <img
+      *ngIf="activeMap === 'image2'"
+      src="assets/images/mapa2.png"
+      alt="Mapa 2 ampliado"
+      class="modal-image"
+    />
+
+  </div>
+</div>

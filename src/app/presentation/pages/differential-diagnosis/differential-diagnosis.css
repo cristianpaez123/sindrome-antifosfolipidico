@@ -1,132 +1,135 @@
-/* Contenedor general */
-.infographic-section {
-  max-width: 920px;
-  margin: 48px auto;
-  padding: 20px;
-  font-family: "Roboto", Arial, sans-serif;
-  color: #1f2937; /* gris oscuro */
+/* Fondo general y estilo del contenedor */
+.container {
+  background: linear-gradient(180deg, #e8f1ff 0%, #ffffff 100%);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  border: 2px solid #000; /* 🔲 Borde negro externo */
 }
 
-/* Bloque de texto descriptivo */
-.text-block {
-  background: #eaf4ff; /* azul muy claro */
-  padding: 28px;
+/* Título */
+.container h2 {
+  text-align: center;
+  color: #0b3d91;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.container p {
+  text-align: center;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 25px auto;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Tabla */
+.table-container {
+  border: 1px solid #000; /* 🔲 Marco negro alrededor de toda la tabla */
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.06);
-  margin-bottom: 24px;
-}
+  padding: 4px; /* separa un poco la tabla del borde */
+  background-color: white; /* evita que el fondo transparente rompa el borde */}
 
-.text-block p {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #0f172a; /* texto bien legible */
-}
-
-/* Cuadro informativo */
-.info-card {
+table {
+  width: 100%;
+  border-collapse: collapse;
   background: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid #000; /* 🔲 Borde negro externo de la tabla */
 }
 
-/* Cabecera del cuadro */
-.info-header {
-  background: #1e3a8a; /* azul oscuro */
-  color: #fff;
-  padding: 18px 20px;
-  text-align: center;
+/* Encabezado */
+thead {
+  background-color: #0b3d91;
+  color: white;
+  border-bottom: 2px solid #000; /* 🔲 Línea divisoria negra entre encabezado y cuerpo */
 }
 
-.info-header h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  letter-spacing: 0.6px;
-  font-weight: 700;
+th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  border-right: 1px solid #000; /* 🔲 Líneas internas negras entre columnas */
 }
 
-/* Cuerpo con lista numerada */
-.info-body {
-  padding: 18px 20px 26px;
+/* Filas */
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  vertical-align: top;
+  border-top: 1px solid #000; /* 🔲 Líneas horizontales internas */
+  border-right: 1px solid #000; /* 🔲 Líneas verticales internas */
 }
 
-.key-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* Eliminar borde derecho del último elemento en cada fila */
+tr th:last-child,
+tr td:last-child {
+  border-right: none;
 }
 
-.key-list li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: transparent;
+/* Alternancia de color */
+tbody tr:nth-child(even) {
+  background-color: #f4f7ff;
 }
 
-/* Circulo con número */
-.index {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  border-radius: 50%;
-  background: #1e3a8a;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+tbody tr:hover {
+  background-color: #e1edff;
+  transition: background-color 0.3s ease;
 }
 
-/* Texto de cada punto */
-.key-list .content {
-  font-size: 1rem;
-  color: #0f172a;
-  line-height: 1.4;
+/* Resaltar nombres */
+td strong {
+  color: #0b3d91;
 }
 
-/* Opcional: centrado y márgenes responsivos */
+/* Responsividad */
 @media (max-width: 768px) {
-  .infographic-section {
-    padding: 16px;
-    margin: 22px auto;
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
   }
 
-  .text-block p {
-    font-size: 1rem;
+  thead tr {
+    display: none;
   }
 
-  .index {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-    font-size: 0.95rem;
+  tbody tr {
+    margin-bottom: 16px;
+    border: 2px solid #000; /* 🔲 Borde negro en vista móvil */
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   }
 
-  .info-header h3 {
-    font-size: 0.95rem;
-    padding: 14px 12px;
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    text-align: right;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
   }
 
-  .info-body {
-    padding: 14px 12px 18px;
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #0b3d91;
+    text-align: left;
   }
-}
 
-/* Si decides usar la imagen en lugar del cuadro HTML */
-.mockup-image-wrap {
-  margin-top: 22px;
-  display: flex;
-  justify-content: center;
-}
-
-.mockup-image-wrap img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  td:last-child {
+    border-bottom: none;
+  }
 }
