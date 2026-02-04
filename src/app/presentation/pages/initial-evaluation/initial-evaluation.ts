@@ -12,7 +12,7 @@ export class InitialEvaluationComponent {
   activeTab: string = 'historia';
 
   setActive(tab: string) {
-    this.activeTab = tab;
+    this.activeTab = tab;  
   }
 
   isActive(tab: string): boolean {

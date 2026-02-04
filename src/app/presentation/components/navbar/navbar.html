@@ -1,14 +1,64 @@
-<nav class="fixed top-0 left-0 w-full bg-white custom-shadow z-50"> 
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-2">
-    <!-- Menú -->
-    <ul [class.hidden]="menuClosed" class="md:flex space-x-6 font-medium text-gray-700">
-      <li><a routerLink="/" class="hover:text-blue-600">Inicio</a></li>
-      <li><a routerLink="/initial-evaluation" class="hover:text-blue-600">Evaluación inicial</a></li>
-      <li><a routerLink="/differential-diagnosis" class="hover:text-blue-600">Diagnóstico diferencial</a></li>
-      <li><a routerLink="/skin-manifestations" class="hover:text-blue-600">Manifestaciones cutáneas</a></li>
-      <li><a routerLink="/local-management-protocol" class="hover:text-blue-600">Protocolo de manejo local</a></li>
-      <li><a routerLink="/systemic-management" class="hover:text-blue-600">Manejo sistémico</a></li>
-      <li><a routerLink="/education-monitoring" class="hover:text-blue-600">Educación y seguimiento</a></li>
+<nav class="navbar">
+  <div class="navbar-container">
+
+    <!-- BRAND -->
+    <div class="navbar-brand">
+      <span class="material-icons brand-icon">medical_services</span>
+      <span class="brand-text">SAF</span>
+    </div>
+
+    <!-- MENÚ -->
+    <ul class="navbar-menu">
+      <li>
+        <a routerLink="/"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">
+          Inicio
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/initial-evaluation"
+           routerLinkActive="active">
+          Evaluación inicial
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/differential-diagnosis"
+           routerLinkActive="active">
+          Diagnóstico diferencial
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/skin-manifestations"
+           routerLinkActive="active">
+          Manifestaciones cutáneas
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/local-management-protocol"
+           routerLinkActive="active">
+          Protocolo de manejo local
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/systemic-management"
+           routerLinkActive="active">
+          Manejo sistémico
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/education-monitoring"
+           routerLinkActive="active">
+          Educación y seguimiento
+        </a>
+      </li>
     </ul>
+
   </div>
 </nav>

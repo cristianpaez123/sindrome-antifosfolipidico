@@ -1,67 +1,145 @@
-/* Navbar general */
-nav {
+/* ===== NAVBAR BASE ===== */
+.navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra de elevación */
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 64px);
+  max-width: 1400px;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   z-index: 1000;
+
+  transition: 
+    all 0.4s ease,
+    padding 0.3s ease;
 }
 
-/* Contenedor */
-nav .max-w-7xl {
-  max-width: 1200px;
-  margin: 0 auto;
+/* ===== CONTENEDOR INTERNO ===== */
+.navbar-container {
   display: flex;
-  justify-content: center; /* ⬅️ centramos el menú */
+  justify-content: space-between;
   align-items: center;
-  padding: 18px 20px; /* más padding arriba y abajo */
+  padding: 18px 32px;
+  transition: padding 0.3s ease;
 }
 
-/* Menú */
-nav ul {
+/* ===== BRAND ===== */
+.navbar-brand {
   display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #1d4ed8;
+}
+
+.brand-icon {
+  font-size: 2rem;
+  color: #1d4ed8;
+}
+
+.brand-text {
+  letter-spacing: 1px;
+}
+
+/* ===== MENÚ ===== */
+.navbar-menu {
+  display: flex;
+  gap: 28px;
   list-style: none;
-  gap: 28px; /* separación entre elementos */
   margin: 0;
   padding: 0;
 }
 
-/* Items del menú */
-nav ul li a {
+.navbar-menu li a {
+  position: relative;
   text-decoration: none;
-  color: #374151; /* gris oscuro */
-  font-size: 1.1rem; /* tamaño de letra */
+  font-size: 1.05rem;
   font-weight: 500;
+  color: #374151;
   padding: 6px 0;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #2563eb; /* azul al pasar el mouse */
+/* Hover */
+.navbar-menu li a:hover {
+  color: #1d4ed8;
 }
 
-/* Responsive */
+/* Línea animada */
+.navbar-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #1d4ed8, #1e88e5);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover::after {
+  width: 100%;
+}
+
+/* ===== ACTIVO ===== */
+.navbar-menu li a.active {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.navbar-menu li a.active::after {
+  width: 100%;
+}
+
+/* ===================================================== */
+/* ===== ESTADO CON SCROLL (NAVBAR ENCOGIDO) ===== */
+/* ===================================================== */
+
+.navbar.scrolled {
+  top: 0;
+  left: 0;
+  transform: none;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.navbar.scrolled .navbar-container {
+  padding: 10px 32px;
+}
+
+.navbar.scrolled .brand-icon {
+  font-size: 1.6rem;
+}
+
+.navbar.scrolled .brand-text {
+  font-size: 1.05rem;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  nav .max-w-7xl {
-    justify-content: flex-start; /* en móvil mejor alinearlo a la izquierda */
+  .navbar {
+    width: calc(100% - 24px);
+    top: 12px;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 14px;
-    background: white;
-    position: absolute;
-    top: 100%;
-    left: 0;
+  .navbar.scrolled {
     width: 100%;
-    padding: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: none;
   }
 
-  nav ul.open {
-    display: flex;
+  .navbar-menu {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }

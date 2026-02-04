@@ -1,35 +1,47 @@
-/* Contenedor principal */
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
 .tabs-container {
-  padding: 2rem;
-  background-color: #f9fafb;
-  border-radius: 1rem;
+  display: flex;
+  gap: 3rem;
+  padding: 3rem;
+  background: linear-gradient(180deg, #e8f1ff 0%, #ffffff 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 
-  max-width: 1200px;     /* ancho máximo */
-  margin: 0 auto;        /* centra horizontalmente */
+  max-width: 1400px;
+  min-height: 75vh;
+  margin: 3rem auto;
 }
 
-/* Barra de pestañas */
+/* ================================
+   MENÚ IZQUIERDO
+================================ */
 .tabs-header {
   display: flex;
-  justify-content: center; /* centra los botones */
-  align-items: center;
-  gap: 1.5rem;             /* espacio entre botones */
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 320px;
 }
 
-/* Botones de pestañas */
+/* ================================
+   BOTONES DE TAB
+================================ */
 .tab-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
   background-color: #e3f2fd;
   color: #1d4ed8;
   font-weight: 600;
-  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  padding: 1.2rem 1.6rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.9rem;
   cursor: pointer;
+  text-align: left;
   transition: all 0.3s ease;
-  text-align: center;
-  min-width: 200px; /* asegura que todos los botones tengan ancho uniforme */
 }
 
 .tab-button:hover {
@@ -37,44 +49,150 @@
   color: #ffffff;
 }
 
-.tab-button.active {
-  background-color: #1d4ed8;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* ================================
+   NUMERACIÓN CLÍNICA
+================================ */
+.tab-index {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0b3d91;
+  opacity: 0.7;
+  min-width: 32px;
 }
 
-/* Contenido */
+/* ================================
+   ÍCONOS
+================================ */
+.tab-icon {
+  font-size: 1.6rem;
+  color: #1e88e5;
+}
+
+/* ================================
+   TEXTO DEL TAB
+================================ */
+.tab-label {
+  flex: 1;
+}
+
+/* ================================
+   TAB ACTIVO
+================================ */
+.tab-button.active {
+  background-color: #0b3d91;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tab-button.active .tab-icon,
+.tab-button.active .tab-index {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* ================================
+   CONTENEDOR DERECHO
+================================ */
+.tabs-content {
+  flex: 1;
+}
+
+/* ================================
+   CARD DE CONTENIDO
+================================ */
 .tab-content {
   background: #ffffff;
-  border-radius: 0.75rem;
-  padding: 2rem;
+  border-radius: 1.25rem;
+  padding: 3rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  color: #374151;
-  font-size: 1.1rem;
-  line-height: 1.6;
 
-  max-width: 900px;
-  margin: 0 auto 2rem auto;   /* centrado y con espacio debajo */
+  font-size: 1.25rem;
+  color: #374151;
+  line-height: 1.7;
+
+  animation: fadeSlide 1.0s ease;
 }
 
-/* Responsive */
+/* ================================
+   ANIMACIÓN
+================================ */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   TÍTULOS
+================================ */
+.tab-content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1d4ed8;
+  margin-bottom: 1.5rem;
+}
+
+/* ================================
+   PÁRRAFOS
+================================ */
+.tab-content p {
+  margin-bottom: 1.4rem;
+}
+
+/* ================================
+   LISTAS
+================================ */
+.tab-content ul {
+  padding-left: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.tab-content li {
+  margin-bottom: 1.1rem;
+  line-height: 1.8;
+}
+
+.tab-content li::marker {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+/* ================================
+   RESALTADO CLÍNICO
+================================ */
+.tab-content b,
+.tab-content strong {
+  color: #0b3d91;
+  font-weight: 700;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px) {
-  .tabs-header {
+  .tabs-container {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .tabs-header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .tab-button {
-    width: 100%;
-    max-width: 300px; /* evita que se estiren demasiado */
+    text-align: center;
+    font-size: 1rem;
   }
-}
-.tabs {
-  display: flex;
-  justify-content: center; /* centra los botones */
-  align-items: center;
-  gap: 1.5rem; /* espacio entre botones */
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+
+  .tab-content {
+    padding: 2rem;
+  }
 }

@@ -7,6 +7,8 @@
   font-family: "Segoe UI", Roboto, sans-serif;
   color: #333;
   border: 2px solid #000; /* 🔲 Borde negro externo */
+   margin: 60px auto;       /* 60px arriba y abajo, centrado horizontal */
+  max-width: 1300px; 
 }
 
 /* Título */
