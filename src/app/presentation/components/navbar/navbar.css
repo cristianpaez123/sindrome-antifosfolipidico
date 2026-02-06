@@ -1,4 +1,6 @@
-/* ===== NAVBAR BASE ===== */
+/* =====================================================
+   ===== NAVBAR BASE =====
+===================================================== */
 .navbar {
   position: fixed;
   top: 16px;
@@ -15,21 +17,28 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   z-index: 1000;
 
-  transition: 
-    all 0.4s ease,
-    padding 0.3s ease;
+  transition:
+    box-shadow 0.35s ease,
+    background 0.35s ease;
 }
 
-/* ===== CONTENEDOR INTERNO ===== */
+/* =====================================================
+   ===== CONTENEDOR INTERNO =====
+===================================================== */
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 32px;
-  transition: padding 0.3s ease;
+  transition:
+    padding 0.35s ease,
+    transform 0.35s ease;
 }
 
-/* ===== BRAND ===== */
+
+/* =====================================================
+   ===== BRAND =====
+===================================================== */
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -42,13 +51,17 @@
 .brand-icon {
   font-size: 2rem;
   color: #1d4ed8;
+  transition: font-size 0.3s ease;
 }
 
 .brand-text {
   letter-spacing: 1px;
+  transition: font-size 0.3s ease;
 }
 
-/* ===== MENÚ ===== */
+/* =====================================================
+   ===== MENÚ =====
+===================================================== */
 .navbar-menu {
   display: flex;
   gap: 28px;
@@ -89,7 +102,7 @@
   width: 100%;
 }
 
-/* ===== ACTIVO ===== */
+/* Activo */
 .navbar-menu li a.active {
   color: #1d4ed8;
   font-weight: 600;
@@ -99,42 +112,34 @@
   width: 100%;
 }
 
-/* ===================================================== */
-/* ===== ESTADO CON SCROLL (NAVBAR ENCOGIDO) ===== */
-/* ===================================================== */
-
+/* =====================================================
+   ===== ESTADO CON SCROLL (NAVBAR ENCOGIDO) =====
+===================================================== */
 .navbar.scrolled {
-  top: 0;
-  left: 0;
-  transform: none;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 0;
-
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
 }
 
 .navbar.scrolled .navbar-container {
-  padding: 10px 32px;
+  padding: 8px 32px;
+  transform: scale(0.96);
 }
 
 .navbar.scrolled .brand-icon {
-  font-size: 1.6rem;
+  font-size: 1.45rem;
 }
 
 .navbar.scrolled .brand-text {
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =====================================================
+   ===== RESPONSIVE =====
+===================================================== */
 @media (max-width: 768px) {
   .navbar {
     width: calc(100% - 24px);
     top: 12px;
-  }
-
-  .navbar.scrolled {
-    width: 100%;
   }
 
   .navbar-menu {
