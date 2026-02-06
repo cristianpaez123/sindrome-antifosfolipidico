@@ -1,0 +1,105 @@
+/* Contenedor general */
+.references-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    padding: 0 20px;
+}
+
+/* Título principal */
+.references-container h2 {
+    text-align: center;
+    color: #0b3d91;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Tarjeta de referencia */
+.reference-card {
+    display: flex;
+    gap: 20px;
+    background: #fdfdfd;
+    border-left: 5px solid #0b3d91;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.reference-card:hover {
+    background-color: #f4f7ff;
+    transform: translateY(-2px);
+}
+
+/* Número de referencia */
+.ref-number {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b3d91;
+    flex-shrink: 0;
+}
+
+/* Contenido de la referencia */
+.ref-content p {
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.ref-authors {
+    font-weight: 600;
+}
+
+.ref-title {
+    font-style: italic;
+}
+
+.ref-source {
+    color: #555;
+    font-size: 14px;
+}
+
+.ref-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #0b3d91;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ref-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .reference-card {
+        display: flex;
+        gap: 20px;
+        background: #fdfdfd;
+        border-left: 5px solid #0b3d91;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        /* 🔹 Más elevación */
+        padding: 20px;
+        margin-bottom: 15px;
+        transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+        border: 1.5px solid #0b3d91;
+        /* 🔹 Borde completo para que destaque */
+    }
+
+    .reference-card:hover {
+        background-color: #f4f7ff;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        /* 🔹 Hover más destacado */
+    }
+
+
+    .ref-number {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+}
