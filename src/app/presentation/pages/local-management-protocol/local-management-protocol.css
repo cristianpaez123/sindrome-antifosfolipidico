@@ -1,147 +1,592 @@
-/* Contenedor general */
-.infographic-section {
-  max-width: 920px;
-  margin: 48px auto;
-  padding: 20px;
-  font-family: "Roboto", Arial, sans-serif;
-  color: #1f2937; /* gris oscuro */
+:root {
+  --primary: #0b3d91;
+  --secondary: #e8f1ff;
+  --danger: #c62828;
+  --border-soft: #d6e2ff;
+  --text-main: #2c2c2c;
 }
 
-/* Bloque de texto descriptivo */
-.text-block {
-  background: #eaf4ff; /* azul muy claro */
-  padding: 28px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.06);
-  margin-bottom: 24px;
+.clinical-section {
+  max-width: 1300px;
+  margin: 60px auto;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
 }
 
-.text-block p {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #0f172a; /* texto bien legible */
-}
-
-/* Cuadro informativo */
-.info-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-/* Cabecera del cuadro */
-.info-header {
-  background: #1e3a8a; /* azul oscuro */
-  color: #fff;
-  padding: 18px 20px;
+.clinical-header {
+  max-width: 900px;
+  margin: 0 auto 90px;
   text-align: center;
 }
 
-.info-header h3 {
+.clinical-lead {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.85;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+
+.clinical-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  bottom: 30px;
+  width: 6px;
+  background-color: #0b3d91;
+  border-radius: 4px;
+}
+
+.clinical-intro {
+  padding-left: 30px;
+}
+
+.clinical-intro h2 {
+  margin: 0 0 14px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0b3d91;
+}
+
+.clinical-intro p {
   margin: 0;
   font-size: 1.05rem;
-  letter-spacing: 0.6px;
-  font-weight: 700;
+  line-height: 1.7;
+  color: #2b2b2b;
+  max-width: 900px;
 }
 
-/* Cuerpo con lista numerada */
-.info-body {
-  padding: 18px 20px 26px;
+.clinical-card {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 40px;
+  box-shadow: 0 12px 28px rgba(11, 61, 145, 0.12);
+  border-left: 6px solid var(--primary);
 }
 
-.key-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.clinical-card p {
+  line-height: 1.7;
+  margin-bottom: 14px;
 }
 
-.key-list li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: transparent;
+.clinical-card ul {
+  padding-left: 20px;
+  margin-bottom: 16px;
 }
 
-/* Circulo con número */
-.index {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  border-radius: 50%;
-  background: #1e3a8a;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+.clinical-card li {
+  margin-bottom: 8px;
 }
 
-/* Texto de cada punto */
-.key-list .content {
-  font-size: 1rem;
-  color: #0f172a;
-  line-height: 1.4;
-}
-
-/* Opcional: centrado y márgenes responsivos */
-@media (max-width: 768px) {
-  .infographic-section {
-    padding: 16px;
-    margin: 22px auto;
-  }
-
-  .text-block p {
-    font-size: 1rem;
-  }
-
-  .index {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-    font-size: 0.95rem;
-  }
-
-  .info-header h3 {
-    font-size: 0.95rem;
-    padding: 14px 12px;
-  }
-
-  .info-body {
-    padding: 14px 12px 18px;
-  }
-}
-
-/* Si decides usar la imagen en lugar del cuadro HTML */
-.mockup-image-wrap {
-  margin-top: 22px;
+.clinical-image {
   display: flex;
   justify-content: center;
+  margin: 30px 0 60px;
 }
 
-.mockup-image-wrap img {
+.clinical-image img {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  width: 760px;
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Separación entre bloques */
-.text-block {
-  margin-bottom: 28px; /* espacio después del bloque de texto */
-}
-
-.mockup-image-wrap {
-  margin: 28px 0; /* espacio arriba y abajo de cada imagen */
-}
-
-.text-block {
+.wound-phases {
+  max-width: 1200px;
+  margin: 80px auto;
   display: flex;
   flex-direction: column;
-  gap: 18px; /* espacio uniforme entre los párrafos */
+  gap: 50px;
+  font-family: "Segoe UI", Roboto, sans-serif;
 }
+
+body {
+  background-color: #f5f8fd;
+}
+
+
+.phase-card {
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow:
+    0 4px 12px rgba(11, 61, 145, 0.08),
+    0 16px 40px rgba(11, 61, 145, 0.14);
+  overflow: hidden;
+  border: 1px solid rgba(11, 61, 145, 0.15);
+
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px;
+  background: linear-gradient(90deg, #e8f1ff, #ffffff);
+  border-bottom: 1px solid #d6e2ff;
+}
+
+.phase-number {
+  background: #0b3d91;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phase-header h3 {
+  flex: 1;
+  color: #0b3d91;
+  font-size: 22px;
+}
+
+.phase-time {
+  font-size: 18px;
+  color: #555;
+  font-weight: 600;
+}
+
+.phase-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 32px;
+}
+
+.phase-normal,
+.phase-saf {
+  padding: 22px;
+  border-radius: 16px;
+}
+
+.phase-normal {
+  background: #f4f8ff;
+  border-left: 5px solid #2f80ed;
+}
+
+.phase-saf {
+  background: #fff3f3;
+  border-left: 5px solid #c62828;
+}
+
+.phase-normal h4,
+.phase-saf h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.phase-image {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.phase-image img {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.infographic-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #1f2937;
+}
+
+/* Línea guía */
+.clinical-flow {
+  border-left: 4px solid rgba(11, 61, 145, 0.35);
+  padding-left: 32px;
+}
+
+/* Paso */
+.flow-step {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+/* Número */
+.flow-step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: -56px;              /* lo empuja un poco */
+  top: 0;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  background: #0b3d91;
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 0 6px rgba(11, 61, 145, 0.15),
+    0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Título */
+.flow-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0b3d91;
+  margin-bottom: 12px;
+}
+
+/* Texto */
+.flow-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* Listas */
+.flow-list {
+  padding-left: 18px;
+  margin-bottom: 18px;
+}
+
+.flow-list li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* Imagen / cuadro */
+.flow-media {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+    text-align: center;
+
+}
+
+
+.flow-media img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clinical-flow {
+    padding-left: 24px;
+  }
+
+  .flow-step::before {
+    left: -40px;
+  }
+}
+
+.infographic-header {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, #f5f8fc, #ffffff);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+/* Etiqueta superior */
+.header-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a4e94;
+  background: rgba(122, 78, 148, 0.1);
+  border-radius: 999px;
+}
+
+/* Título principal */
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.header-title span {
+  display: block;
+  font-weight: 500;
+  color: #4b5563;
+  margin-top: 0.3rem;
+}
+
+/* Texto descriptivo */
+.header-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+
+.infographic-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 6rem;
+  padding: 4rem 3rem;
+
+  /* 🔑 CAMBIO REAL */
+  background: #ffffff; /* blanco puro */
+  border-radius: 28px;
+  border: 1px solid rgba(11, 61, 145, 0.15);
+
+  box-shadow:
+    0 32px 70px rgba(0, 0, 0, 0.12),
+    0 10px 22px rgba(11, 61, 145, 0.10);
+}
+
+.flow-media figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* ==============================
+   ANIMACIONES BASE
+============================== */
+
+.animate-container * {
+  animation-fill-mode: both;
+}
+
+/* Fade + slide */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: fadeLeft 0.9s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==============================
+   CARDS – HOVER ELEVADO
+============================== */
+
+.phase-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.phase-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 18px 40px rgba(11, 61, 145, 0.25),
+    0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ==============================
+   NÚMEROS CON PULSE SUAVE
+============================== */
+
+.phase-number {
+  animation: pulse 2.8s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(11,61,145,0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(11,61,145,0); }
+  100% { box-shadow: 0 0 0 0 rgba(11,61,145,0); }
+}
+
+/* ==============================
+   IMÁGENES – ZOOM ELEGANTE
+============================== */
+
+.zoom-hover img {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.zoom-hover:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+}
+
+/* ==============================
+   TIMELINE MÁS VIVA
+============================== */
+
+.flow-step {
+  transition: transform 0.3s ease;
+}
+
+.flow-step:hover {
+  transform: translateX(6px);
+}
+
+/* ==============================
+   HEADER CON BRILLO SUTIL
+============================== */
+
+.infographic-header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.infographic-header:hover::after {
+  opacity: 1;
+}
+
+.flow-image,
+.modal-trigger {
+  cursor: zoom-in;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.flow-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
+}
+
+/* ===============================
+   MODAL
+================================ */
+.map-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: modalBackdrop 0.3s ease forwards;
+}
+
+.map-modal-content {
+  background: #ffffff;
+  border-radius: 1rem;
+  width: 90vw;
+  height: 90vh;
+  max-width: 1200px;
+  max-height: 900px;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: modalPop 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 2.2rem;
+  color: #1d4ed8;
+  cursor: pointer;
+  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg) scale(1.1);
+  background: #1d4ed8;
+  color: white;
+}
+
+/* ===============================
+   MAPA EN MODAL
+================================ */
+.modal-image,
+.modal-map {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  transition: transform 0.4s ease;
+}
+
+.map-modal-content:hover .modal-image,
+.map-modal-content:hover .modal-map {
+  transform: scale(1.02);
+}
+
+/* ===============================
+   ANIMACIONES
+================================ */
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalBackdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+

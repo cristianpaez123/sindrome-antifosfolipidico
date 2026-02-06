@@ -1,132 +1,315 @@
-/* Contenedor general */
-.infographic-section {
-  max-width: 920px;
-  margin: 48px auto;
-  padding: 20px;
-  font-family: "Roboto", Arial, sans-serif;
-  color: #1f2937; /* gris oscuro */
+/* ===============================
+   CONTENEDOR GENERAL
+================================ */
+.education-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  font-size: 17px;
+
+  /* Animación de entrada */
+  animation: fadeInUp 0.8s ease-out both;
 }
 
-/* Bloque de texto descriptivo */
-.text-block {
-  background: #eaf4ff; /* azul muy claro */
-  padding: 28px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.06);
-  margin-bottom: 24px;
-}
-
-.text-block p {
-  margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #0f172a; /* texto bien legible */
-}
-
-/* Cuadro informativo */
-.info-card {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-/* Cabecera del cuadro */
-.info-header {
-  background: #1e3a8a; /* azul oscuro */
-  color: #fff;
-  padding: 18px 20px;
+/* ===============================
+   TÍTULO E INTRODUCCIÓN
+================================ */
+.education-container h2 {
   text-align: center;
+  color: #0b3d91;
+  font-size: 32px;
+  margin-bottom: 12px;
 }
 
-.info-header h3 {
+.education-container .intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   CARDS PRINCIPALES
+================================ */
+.info-card {
+  position: relative;
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 30px;
+  border-left: 6px solid #0b3d91;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  /* Animación escalonada */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cardReveal 0.7s ease-out forwards;
+
+  /* Hover */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.info-card:nth-of-type(1) { animation-delay: 0.1s; }
+.info-card:nth-of-type(2) { animation-delay: 0.25s; }
+.info-card:nth-of-type(3) { animation-delay: 0.4s; }
+.info-card:nth-of-type(4) { animation-delay: 0.55s; }
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Variante alerta */
+.info-card.warning {
+  border-left-color: #c0392b;
+}
+
+/* ===============================
+   CABECERA DE CARD
+================================ */
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-header .icon {
+  font-size: 26px;
+  margin-right: 12px;
+  transition: transform 0.4s ease;
+}
+
+.info-card:hover .card-header .icon {
+  transform: scale(1.15) rotate(-3deg);
+}
+
+.card-header h3 {
+  color: #0b3d91;
+  font-size: 22px;
   margin: 0;
-  font-size: 1.05rem;
-  letter-spacing: 0.6px;
-  font-weight: 700;
 }
 
-/* Cuerpo con lista numerada */
-.info-body {
-  padding: 18px 20px 26px;
+.warning h3 {
+  color: #c0392b;
 }
 
-.key-list {
+/* ===============================
+   TEXTO
+================================ */
+.info-card p {
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   LISTAS
+================================ */
+.item-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
-.key-list li {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: transparent;
-}
-
-/* Circulo con número */
-.index {
-  width: 36px;
-  height: 36px;
-  min-width: 36px;
-  border-radius: 50%;
-  background: #1e3a8a;
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
-
-/* Texto de cada punto */
-.key-list .content {
-  font-size: 1rem;
-  color: #0f172a;
-  line-height: 1.4;
-}
-
-/* Opcional: centrado y márgenes responsivos */
-@media (max-width: 768px) {
-  .infographic-section {
-    padding: 16px;
-    margin: 22px auto;
-  }
-
-  .text-block p {
-    font-size: 1rem;
-  }
-
-  .index {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-    font-size: 0.95rem;
-  }
-
-  .info-header h3 {
-    font-size: 0.95rem;
-    padding: 14px 12px;
-  }
-
-  .info-body {
-    padding: 14px 12px 18px;
-  }
-}
-
-/* Si decides usar la imagen en lugar del cuadro HTML */
-.mockup-image-wrap {
-  margin-top: 22px;
-  display: flex;
-  justify-content: center;
-}
-
-.mockup-image-wrap img {
-  max-width: 100%;
-  height: auto;
+.item-list li {
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  background: #f4f7ff;
   border-radius: 10px;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  font-size: 16.5px;
+  border-left: 4px solid #0b3d91;
+
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
+
+.item-list li:hover {
+  transform: translateX(6px);
+  background-color: #e6efff;
+}
+
+.warning .item-list li {
+  border-left-color: #c0392b;
+}
+
+/* ===============================
+   BLOQUES DESTACADOS
+================================ */
+.highlight {
+  margin-top: 16px;
+  padding: 16px;
+  background: #eaf1ff;
+  border-radius: 12px;
+  font-size: 16.5px;
+  color: #0b3d91;
+  font-weight: 500;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.15);
+}
+
+/* ===============================
+   ANIMACIONES
+================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .education-container {
+    padding: 24px;
+  }
+
+  .education-container h2 {
+    font-size: 26px;
+  }
+
+  .card-header h3 {
+    font-size: 20px;
+  }
+}
+
+/* ===============================
+   ACCESIBILIDAD
+================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Tabla */
+.table-container {
+  border: 1px solid #000; /* 🔲 Marco negro alrededor de toda la tabla */
+  border-radius: 12px;
+  padding: 4px; /* separa un poco la tabla del borde */
+  background-color: white; /* evita que el fondo transparente rompa el borde */}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 2px solid #000; /* 🔲 Borde negro externo de la tabla */
+}
+
+/* Encabezado */
+thead {
+  background-color: #0b3d91;
+  color: white;
+  border-bottom: 2px solid #000; /* 🔲 Línea divisoria negra entre encabezado y cuerpo */
+}
+
+th {
+  text-align: left;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  border-right: 1px solid #000; /* 🔲 Líneas internas negras entre columnas */
+}
+
+/* Filas */
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  vertical-align: top;
+  border-top: 1px solid #000; /* 🔲 Líneas horizontales internas */
+  border-right: 1px solid #000; /* 🔲 Líneas verticales internas */
+}
+
+/* Eliminar borde derecho del último elemento en cada fila */
+tr th:last-child,
+tr td:last-child {
+  border-right: none;
+}
+
+/* Alternancia de color */
+tbody tr:nth-child(even) {
+  background-color: #f4f7ff;
+}
+
+tbody tr:hover {
+  background-color: #e1edff;
+  transition: background-color 0.3s ease;
+}
+
+/* Resaltar nombres */
+td strong {
+  color: #0b3d91;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 16px;
+    border: 2px solid #000; /* 🔲 Borde negro en vista móvil */
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    text-align: right;
+    font-size: 14px;
+    border-bottom: 1px solid #000;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #0b3d91;
+    text-align: left;
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+}
+

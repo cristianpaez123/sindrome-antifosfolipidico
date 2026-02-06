@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-local-management-protocol',
-  imports: [],
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './local-management-protocol.html',
-  styleUrl: './local-management-protocol.css'
+  styleUrls: ['./local-management-protocol.css'] // ✅ PLURAL
 })
 export class LocalManagementProtocol {
 
+  isModalOpen = false;
+  activeImage: string | null = null;
+
+  openModal(imageSrc: string) {
+    console.log('CLICK OK', imageSrc);
+    this.activeImage = imageSrc;
+    this.isModalOpen = true;
+  }
+
+  closeModal() {
+    this.isModalOpen = false;
+    this.activeImage = null;
+  }
 }

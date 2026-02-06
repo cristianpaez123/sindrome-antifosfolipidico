@@ -1,273 +1,343 @@
-<section class="infographic-section">
-    <!-- Texto descriptivo (bloque) -->
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p>
+<section class="clinical-section animate-container">
+
+    <!-- INTRO -->
+    <header class="clinical-header fade-up">
+        <p class="clinical-lead">
             Para realizar un adecuado manejo de las heridas, recordemos las cuatro etapas de la cicatrización de heridas
             y su relación con SAF
         </p>
+    </header>
+
+    <div class="clinical-image fade-up delay-1">
+        <img src="assets/images/piel.png" alt="Mockup informativo SAF" class="flow-image"
+            (click)="openModal('assets/images/piel.png')" />
     </div>
 
-    <div class="mockup-image-wrap">
-        <img src="assets/images/piel.png" alt="Mockup informativo SAF">
-    </div>
+    <!-- ================= ETAPAS CICATRIZACIÓN ================= -->
 
-    <!-- Segundo bloque -->
-    <div class="text-block" role="article" aria-label="Descripción clínica adicional">
+    <section class="wound-phases">
 
-        <p>
-            <strong>Hemostasia:</strong> La fase inicial de la cicatrización, que se extiende de 1 a 3 días, es un
-            proceso crucial que comienza con la hemostasia. Su objetivo es detener el sangrado mediante una
-            vasoconstricción inicial y la formación de un coágulo de fibrina, que actúa como una barrera protectora y
-            una matriz para la migración celular
-        </p>
+        <!-- FASE 1 -->
+        <article class="phase-card fade-up">
+            <div class="phase-header">
+                <span class="phase-number">01</span>
+                <h3>Hemostasia</h3>
+                <span class="phase-time">1 – 3 días</span>
+            </div>
 
-        <ul>
-            <li>
-                <strong>Actuación del SAF:</strong> Los aPL activan las células endoteliales y plaquetas promoviendo la
-                expresión de factor tisular y la producción de trombina lo que induce una estado hipercoagulable con
-                mayor formación de trombos y alteración de la hemostasia fisiológica, las plaquetas liberan mediadores
-                como P-selectina y CD40L lo que intensifica la agregación e interacción con leucocitos.
-            </li>
-        </ul>
-        <p>
-            <strong>Inflamación:</strong> Esta fase se caracteriza por la aparición de eritema, edema, dolor e
-            hiperemia, síntomas derivados del aumento de la permeabilidad y el flujo sanguíneo en la zona lesionada,
-            células como neutrófilos, monocitos y macrófagos regulan el crecimiento, la migración y el metabolismo
-            celular al liberar mediadores que estimulan las terminaciones nerviosas.
-        </p>
+            <div class="phase-body">
+                <div class="phase-normal">
+                    <h4>Proceso fisiológico</h4>
+                    <p>
+                        La fase inicial de la cicatrización, que se extiende de 1 a 3 días, es un proceso crucial
+                        que comienza con la hemostasia.
+                        Su objetivo es detener el sangrado mediante una vasoconstricción inicial y la formación de
+                        un coágulo de fibrina,
+                        que actúa como una barrera protectora y una matriz para la migración celular
+                    </p>
+                </div>
 
-        <ul>
-            <li>
-                <strong>Actuación del SAF:</strong> La activación de monocitos y neutrófilos mediados por los aPL,
-                secretan citocinas proinflamatorias y forman trampas extracelulares de neutrófilos promoviendo su estado
-                trombótico e inflamatorio, se activa la vía del complemento y se incrementa la expresión de moléculas de
-                adhesión endotelial generando un desequilibrio y daño vascular.
-            </li>
-        </ul>
+                <div class="phase-saf">
+                    <h4>Actuación del SAF</h4>
+                    <p>
+                        Los aPL activan las células endoteliales y plaquetas promoviendo la expresión de factor
+                        tisular y la producción de trombina
+                        lo que induce una estado hipercoagulable con mayor formación de trombos y alteración de la
+                        hemostasia fisiológica,
+                        las plaquetas liberan mediadores como P-selectina y CD40L lo que intensifica la agregación e
+                        interacción con leucocitos.
+                    </p>
+                </div>
+            </div>
+        </article>
 
-        <p>
-            <strong>Proliferativa:</strong> Después de la fase de control de la herida, se inicia la fase de
-            reconstrucción, que dura aproximadamente de 3 a 10 días, con el objetivo de cubrir la superficie lesionada.
-            Este proceso involucra la fibroplasia, la síntesis de una nueva matriz extracelular, la angiogénesis, la
-            regeneración axonal y la epitelización.
-        </p>
+        <!-- FASE 2 -->
+        <article class="phase-card fade-up delay-1">
+            <div class="phase-header">
+                <span class="phase-number">02</span>
+                <h3>Inflamación</h3>
+            </div>
 
-        <ul>
-            <li>
-                <strong>Actuación del SAF:</strong> El daño endotelial generado por los aPL, alteran la proliferación y
-                migración de células endoteliales y fibroblastos, la estimulación de la angiogénesis y la formación de
-                tejido de granulación se ve interrumpida por estos anticuerpos, además, el exceso de trombina y la
-                inhibición de la fibrinolisis impiden la adecuada remodelación de la matriz extracelular
-            </li>
-        </ul>
+            <div class="phase-body">
+                <div class="phase-normal">
+                    <h4>Proceso fisiológico</h4>
+                    <p>
+                        Esta fase se caracteriza por la aparición de eritema, edema, dolor e hiperemia, síntomas
+                        derivados del aumento de la permeabilidad
+                        y el flujo sanguíneo en la zona lesionada, células como neutrófilos, monocitos y macrófagos
+                        regulan el crecimiento,
+                        la migración y el metabolismo celular al liberar mediadores que estimulan las terminaciones
+                        nerviosas.
+                    </p>
+                </div>
 
-        <p>
-            <strong>Remodelación:</strong> el objetivo es fortalecer el tejido cicatrizal y restaurar la función
-            tisular. Inicia entre 2 y 3 semanas después de la lesión, cuando fibroblastos y miofibroblastos sintetizan
-            colágeno tipo I, III y V para aumentar la fuerza de la cicatriz, la regresión de los vasos sanguíneos reduce
-            la vascularización excesiva, lo que hace que la cicatriz disminuya su coloración, la remodelación de la
-            matriz se encarga de eliminar el exceso de material depositado, con la ayuda de enzimas como las
-            metaloproteasas
-        </p>
+                <div class="phase-saf">
+                    <h4>Actuación del SAF</h4>
+                    <p>
+                        La activación de monocitos y neutrófilos mediados por los aPL, secretan citocinas
+                        proinflamatorias y forman trampas extracelulares
+                        de neutrófilos promoviendo su estado trombótico e inflamatorio, se activa la vía del
+                        complemento y se incrementa la expresión
+                        de moléculas de adhesión endotelial generando un desequilibrio y daño vascular.
+                    </p>
+                </div>
+            </div>
+        </article>
 
-        <ul>
-            <li>
-                <strong>Actuación del SAF:</strong> La persistencia del estado trombótico y la inflamación progresiva
-                alteran la maduración y síntesis de colágeno lo que impide la organización de la matriz extracelular
-                retrasando el proceso de cicatrización, desarrollo de cicatrices disfuncionales y una calidad disminuida
-                en la reparación tisular
-            </li>
-        </ul>
+        <!-- FASE 3 -->
+        <article class="phase-card fade-up delay-2">
+            <div class="phase-header">
+                <span class="phase-number">03</span>
+                <h3>Proliferativa</h3>
+                <span class="phase-time">3 – 10 días</span>
+            </div>
 
-        <p>
-            El manejo para las manifestaciones cutáneas debe integrar los siguiente aspectos
-        </p>
+            <div class="phase-body">
+                <div class="phase-normal">
+                    <h4>Proceso fisiológico</h4>
+                    <p>
+                        Después de la fase de control de la herida, se inicia la fase de reconstrucción, que dura
+                        aproximadamente de 3 a 10 días,
+                        con el objetivo de cubrir la superficie lesionada. Este proceso involucra la fibroplasia, la
+                        síntesis de una nueva matriz
+                        extracelular, la angiogénesis, la regeneración axonal y la epitelización.
+                    </p>
+                </div>
 
-        <p>
-            <strong>Limpieza:</strong> Debe realizarse teniendo en cuenta todos los aspectos de bioseguridad, uso de
-            soluciones no citotóxicas evitando traumatismo que puedan inducir el sangrado o daño adicional las
-            características de estas soluciones debe ir orientadas a:
-        </p>
+                <div class="phase-saf">
+                    <h4>Actuación del SAF</h4>
+                    <p>
+                        El daño endotelial generado por los aPL, alteran la proliferación y migración de células
+                        endoteliales y fibroblastos,
+                        la estimulación de la angiogénesis y la formación de tejido de granulación se ve
+                        interrumpida por estos anticuerpos,
+                        además, el exceso de trombina y la inhibición de la fibrinolisis impiden la adecuada
+                        remodelación de la matriz extracelular
+                    </p>
+                </div>
+            </div>
+        </article>
 
-        <ul>
-            <li>
-                Amplio espectro antimicrobiano </li>
-            <li>
-                Restablecer el equilibrio del lecho de la herida
-            </li>
-            <li>
-                Prevención de Biofilm
-            </li>
-            <li>
-                Control y regulación del PH
-            </li>
-            <li>
-                Tolerancia cutánea
-            </li>
-            <li>
-                Ausencia de citotoxicidad
-            </li>
-            <li>
-                Facilidad de aplicación
-            </li>
-        </ul>
+        <!-- FASE 4 -->
+        <article class="phase-card fade-up delay-3">
+            <div class="phase-header">
+                <span class="phase-number">04</span>
+                <h3>Remodelación</h3>
+            </div>
 
-    </div>
+            <div class="phase-body">
+                <div class="phase-normal">
+                    <h4>Proceso fisiológico</h4>
+                    <p>
+                        el objetivo es fortalecer el tejido cicatrizal y restaurar la función tisular. Inicia entre
+                        2 y 3 semanas después de la lesión,
+                        cuando fibroblastos y miofibroblastos sintetizan colágeno tipo I, III y V para aumentar la
+                        fuerza de la cicatriz,
+                        la regresión de los vasos sanguíneos reduce la vascularización excesiva, lo que hace que la
+                        cicatriz disminuya su coloración,
+                        la remodelación de la matriz se encarga de eliminar el exceso de material depositado, con la
+                        ayuda de enzimas como las metaloproteasas
+                    </p>
+                </div>
 
-    <div class="mockup-image-wrap">
-        <img src="assets/images/pasos.png" alt="Infografía sobre cicatrización" />
-    </div>
+                <div class="phase-saf">
+                    <h4>Actuación del SAF</h4>
+                    <p>
+                        La persistencia del estado trombótico y la inflamación progresiva alteran la maduración y
+                        síntesis de colágeno lo que impide
+                        la organización de la matriz extracelular retrasando el proceso de cicatrización, desarrollo
+                        de cicatrices disfuncionales y
+                        una calidad disminuida en la reparación tisular
+                    </p>
+                </div>
+            </div>
+        </article>
 
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p>
-            <strong>Desbridamiento:</strong> Se debe realizar un análisis individual, conservador y multidisciplinario
-            por el alto riesgo de sangrado y dolor que cursan los pacientes, se sugiere emplear métodos de
-            desbridamiento como autolítico o enzimático los cuales son menos invasivos y reducen el riesgo de
-            hemorragia, esto en combinación con apósitos de alta tecnología
-        </p>
-        <ul>
-            <li>
-                El desbridamiento quirúrgico sólo debe considerarse en casos de necrosis extensa, SAF catastrófico o
-                infección no controlada bajo estricta supervisión del equipo especializado, considerando el estado de
-                coagulación, extensión, profundidad de la lesión y comorbilidades del paciente
+    </section>
 
-            </li>
-            <li>
-                Materias a eliminar durante el desbridamiento en la higiene de las lesiones: Biofilm, tejido
-                desvitalizado (necrosis, esfacelo, escara), exceso de exudado, costra serosa, hiperqueratosis, pus,
-                hematomas, cuerpos extraños, elementos residuales y restos de apósitos anteriores
+    <!-- ================= INFOGRAFÍA ================= -->
 
-            </li>
-        </ul>
+    <section class="infographic-wrapper fade-up">
 
-        <p>
-            <strong>Apósitos avanzados:</strong> Igual que el desbridamiento, el uso de esta tecnología debe ser
-            individualizado, permitiendo cambios menos frecuentes y facilitando el seguimiento de la evolución de la
-            lesión, la elección del apósito debe basarse en la fase de cicatrización, exudado, presencia de infección,
-            tolerancia del paciente y el tipo de tejido.
-            Es importante tener en cuenta que las características que brindan estos dispositivos son:
+        <header class="infographic-header">
+            <span class="header-badge">Abordaje integral</span>
 
-        </p>
+            <h2 class="header-title">
+                El manejo de las manifestaciones cutáneas
+                <span>debe integrar los siguientes aspectos</span>
+            </h2>
 
-        <ul>
-            <li>
-                Mantener ambiente húmedo controlado
+            <p class="header-description">
+                El tratamiento debe ser sistemático, individualizado y multidisciplinario, integrando medidas locales
+                y estrategias clínicas orientadas a optimizar la cicatrización y prevenir complicaciones asociadas al
+                SAF.
+            </p>
+        </header>
 
+        <div class="clinical-flow">
 
-            </li>
-            <li>
-                Control de la carga bacteriana
-            </li>
-            <li>
-                Desbridamiento autolítico
-            </li>
-            <li>
-                Control del exudado
-            </li>
-            <li>
-                Atraumático
-            </li>
-            <li>
-                Adaptación a la morfología de la herida
-            </li>
-        </ul>
+            <div class="flow-step fade-left" data-step="01">
+                <h3 class="flow-title">Limpieza</h3>
+                <p class="flow-text">
+                    Debe realizarse teniendo en cuenta todos los aspectos de bioseguridad, uso de soluciones no
+                    citotóxicas evitando traumatismo que puedan inducir el sangrado o daño adicional las características
+                    de estas soluciones debe ir orientadas a:
+                </p>
+                <ul class="flow-list">
+                    <li>Amplio espectro antimicrobiano</li>
+                    <li>Restablecer el equilibrio del lecho de la herida</li>
+                    <li>Prevención de Biofilm</li>
+                    <li>Control y regulación del PH</li>
+                    <li>Tolerancia cutánea</li>
+                    <li>Ausencia de citotoxicidad</li>
+                    <li>Facilidad de aplicación</li>
+                </ul>
 
-        <p>
-            The Journal of Wound Care (JWC) Estandariza una guia para la elección de productos para heridas en la cual
-            se describen los diferentes tipos tecnologías a nivel mundial teniendo en cuenta sus componentes y objetivo
-            de tratamiento
-        </p>
-        <p>
-            Guía del profesional para la selección de productos para heridas: https://www.woundcarehandbook.com/
-        </p>
-    </div>
+                <div class="clinical-image fade-up delay-1">
+                    <img src="assets/images/pasos.png" alt="Limpieza de heridas" class="flow-image"
+                        (click)="openModal('assets/images/pasos.png')" />
+                </div>
+            </div>
 
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro2.png" alt="Mockup informativo SAF">
-    </div>
+            <div class="flow-step fade-left delay-1" data-step="02">
+                <h3 class="flow-title">Desbridamiento</h3>
+                <p class="flow-text">
+                    Se debe realizar un análisis individual, conservador y multidisciplinario por el alto riesgo de
+                    sangrado y dolor que cursan los pacientes, se sugiere emplear métodos de desbridamiento como
+                    autolítico o enzimático los cuales son menos invasivos y reducen el riesgo de hemorragia, esto en
+                    combinación con apósitos de alta tecnología
+                </p>
+                <ul class="flow-list">
+                    <li>El desbridamiento quirúrgico sólo debe considerarse en casos de necrosis extensa, SAF
+                        catastrófico o infección no controlada bajo estricta supervisión del equipo especializado,
+                        considerando el estado de coagulación, extensión, profundidad de la lesión y comorbilidades del
+                        paciente
+                    </li>
 
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p>
-            <strong>Control de infección:</strong>Es fundamental realizar una evaluación temprana y continua de signos
-            de infección local y sistémica ya que las infecciones pueden precipitar complicaciones graves como el
-            Síndrome Antifosfolipídico Catastrófico, se recomienda un equipo integran enfermeros especialistas en
-            heridas, infectología, reumatología y hematología para asegurar un abordaje integral y personalizado
-        </p>
-    </div>
+                    <li>Materias a eliminar durante el desbridamiento en la higiene de las lesiones: Biofilm, tejido
+                        desvitalizado (necrosis, esfacelo, escara), exceso de exudado, costra serosa, hiperqueratosis,
+                        pus, hematomas, cuerpos extraños, elementos residuales y restos de apósitos anteriores
+                    </li>
+                </ul>
+            </div>
 
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro3.png" alt="Mockup informativo SAF">
-    </div>
+            <div class="flow-step fade-left delay-2" data-step="03">
+                <h3 class="flow-title">Apósitos avanzados</h3>
+                <p class="flow-text">
+                    Igual que el desbridamiento, el uso de esta tecnología debe ser individualizado, permitiendo cambios
+                    menos frecuentes y facilitando el seguimiento de la evolución de la lesión, la elección del apósito
+                    debe basarse en la fase de cicatrización, exudado, presencia de infección, tolerancia del paciente y
+                    el tipo de tejido.
+                    Es importante tener en cuenta que las características que brindan estos dispositivos son:
+                </p>
+                <ul class="flow-list">
+                    <li>Mantener ambiente húmedo controlado</li>
+                    <li>Control de la carga bacteriana</li>
+                    <li>Desbridamiento autolítico</li>
+                    <li>Control del exudado</li>
+                    <li>Atraumático</li>
+                    <li>Adaptación a la morfología de la herida</li>
+                </ul>
+                <p class="flow-text">
+                    The Journal of Wound Care (JWC) Estandariza una guia para la elección de productos para heridas en
+                    la cual se describen los diferentes tipos tecnologías a nivel mundial teniendo en cuenta sus
+                    componentes y objetivo de tratamiento
+                    Guía del profesional para la selección de productos para heridas: https://www.woundcarehandbook.com/
+                </p>
+                <div class="clinical-image fade-up delay-1">
+                    <img src="assets/images/cuadro2.png" alt="Desbridamiento" class="flow-image"
+                        (click)="openModal('assets/images/cuadro2.png')" />
+                </div>
+            </div>
 
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p>
-            <strong>Compresión:</strong>La clave para maximizar la eficacia y minimizar riesgos al brindar una terapia
-            compresiva se debe abordar de múltiples aspectos, la valoración debe ser individualizada considerando el
-            riesgo del paciente, la compresión debe ser gradual, controlada y adaptada a tolerancia del paciente
-            evitando presiones excesivas que puedan comprometer la perfusión tisular o agravar lesiones isquémicas, como
-            medidas iniciales se recomienda
+            <div class="flow-step fade-left delay-3" data-step="04">
+                <h3 class="flow-title">Control de infección</h3>
+                <p class="flow-text">
+                    Es fundamental realizar una evaluación temprana y continua de signos de infección local y sistémica
+                    ya que las infecciones pueden precipitar complicaciones graves como el Síndrome Antifosfolipídico
+                    Catastrófico, se recomienda un equipo integran enfermeros especialistas en heridas, infectología,
+                    reumatología y hematología para asegurar un abordaje integral y personalizado
+                </p>
+                <div class="clinical-image fade-up delay-1">
+                    <img src="assets/images/cuadro3.png" alt="Apósitos" class="flow-image"
+                        (click)="openModal('assets/images/cuadro3.png')" />
+                </div>
 
-        </p>
-        <ul>
-            <li>
-                Exploración física de pulsos
+                <p class="flow-text">
+                    Se sugiere evaluar signos de infección local y sistémica por medio de herramientas y escalas como
+                    (TIMES,NERDS, STONES) incluidas en el consenso internacional de 2022 del International Wound
+                    Infection Institute (IWWI), el cual puede ser consultado en el siguiente apartado:
+                    https://woundinfection-institute.com/wp-content/uploads/IWII-CD-2022_ES-web.pdf
+                </p>
+            </div>
 
+            <div class="flow-step fade-left delay-4" data-step="05">
+                <h3 class="flow-title">Compresión</h3>
+                <p class="flow-text">
+                    La clave para maximizar la eficacia y minimizar riesgos al brindar una terapia compresiva se debe
+                    abordar de múltiples aspectos, la valoración debe ser individualizada considerando el riesgo del
+                    paciente, la compresión debe ser gradual, controlada y adaptada a tolerancia del paciente evitando
+                    presiones excesivas que puedan comprometer la perfusión tisular o agravar lesiones isquémicas, como
+                    medidas iniciales se recomienda
+                </p>
 
-            </li>
-            <li>
-                Signos de isquemia
-            </li>
-            <li>
-                Toma de Índice Tobillo Brazo (ITB)
-            </li>
-            <li>
-                Doppler venoso y arterial
-            </li>
-            <li>
-                Estudios de detección de anticuerpos
-            </li>
-            <li>
-                Biopsia </li>
-        </ul>
+                <ul class="flow-list">
+                    <li>Exploración física de pulsos</li>
+                    <li>Signos de isquemia</li>
+                    <li>Toma de Índice Tobillo Brazo (ITB)</li>
+                    <li>Doppler venoso y arterial</li>
+                    <li>Estudios de detección de anticuerpos</li>
+                    <li>ABiopsia</li>
+                </ul>
 
-        <p>
-            Es importante educar al paciente sobre la adherencia al tratamiento, colocación de vendajes, ejercicios
-            miolinfoquineticos y controles regulares
-            Abordaje integral del paciente con heridas
-        </p>
+                <p class="flow-text">
+                    Es importante educar al paciente sobre la adherencia al tratamiento, colocación de vendajes,
+                    ejercicios miolinfoquineticos y controles regulares
+                    Abordaje integral del paciente con heridas
+                </p>
+                <div class="clinical-image fade-up delay-1">
+                    <img src="assets/images/cuadro4.png" alt="Apósitos" class="flow-image"
+                        (click)="openModal('assets/images/cuadro4.png')" />
+                </div>
+            </div>
 
-    </div>
-
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro4.png" alt="Mockup informativo SAF">
-    </div>
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p><strong>Monitorización de cicatrización:</strong>
-            El uso de escalas objetivas permite una valoración más precisa en la cual el profesional puede realizar
-            cambios y adaptaciones de forma oportuna adaptando el tratamiento a las necesidades de las lesiones, el
-            instrumento RESVECH 2.0 es un instrumento validado y aplicado para todo tipo de herida crónica permitiendo
-            una monitorización y seguimiento del proceso de cicatrización, cuanto más alta es la puntuación la herida se
-            encuentra en malas condiciones y viceversa
-        </p>
-    </div>
-
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro5.png" alt="Mockup informativo SAF">
-    </div>
-
-    <div class="text-block" role="article" aria-label="Descripción clínica">
-        <p>Es fundamental realizar una evaluación temprana y continua con ayuda de escalas e instrumentos validados para
-            monitorizar la actividad y el daño cutáneo en pacientes con SAF, se sugiere el uso de (aGAPSS) Global
-            Antiphospholipid Syndrome Score ajustado, el cual permite evaluar la actividad global del SAF y el daño
-            acumulado en órganos, incluido la piel cuanto más alto es el puntaje, el riesgo de trombosis se considera
-            alto </p>
-    </div>
-
-    <div class="mockup-image-wrap">
-        <img src="assets/images/cuadro6.png" alt="Mockup informativo SAF">
-    </div>
-
-
-
+            <div class="flow-step fade-left delay-5" data-step="06">
+                <h3 class="flow-title">Monitorización de cicatrización</h3>
+                <p class="flow-text">
+                    El uso de escalas objetivas permite una valoración más precisa en la cual el profesional puede
+                    realizar cambios y adaptaciones de forma oportuna adaptando el tratamiento a las necesidades de las
+                    lesiones, el instrumento RESVECH 2.0 es un instrumento validado y aplicado para todo tipo de herida
+                    crónica permitiendo una monitorización y seguimiento del proceso de cicatrización, cuanto más alta
+                    es la puntuación la herida se encuentra en malas condiciones y viceversa
+                </p>
+                <div class="clinical-image fade-up delay-1">
+                    <img src="assets/images/cuadro5.png" alt="Escala RESVECH 2.0" class="flow-image"
+                        (click)="openModal('assets/images/cuadro5.png')" />
+                </div>
+                <p class="flow-text">
+                    Es fundamental realizar una evaluación temprana y continua con ayuda de escalas e instrumentos
+                    validados para monitorizar la actividad y el daño cutáneo en pacientes con SAF, se sugiere el uso de
+                    (aGAPSS) Global Antiphospholipid Syndrome Score ajustado, el cual permite evaluar la actividad
+                    global del SAF y el daño acumulado en órganos, incluido la piel cuanto más alto es el puntaje, el
+                    riesgo de trombosis se considera alto
+                </p>
+                <div class="clinical-image fade-up delay-1">
+                    <img src="assets/images/cuadro6.png" alt="aGAPSS score" class="flow-image"
+                        (click)="openModal('assets/images/cuadro6.png')" />
+                </div>
+            </div>
+        </div>
+    </section>
 
 </section>
+
+<!-- MODAL -->
+<div class="map-modal" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="map-modal-content" (click)="$event.stopPropagation()">
+
+        <span class="material-icons close-btn" (click)="closeModal()">close</span>
+
+        <img *ngIf="activeImage" [src]="activeImage" alt="Imagen ampliada" class="modal-image" />
+
+    </div>
+</div>
