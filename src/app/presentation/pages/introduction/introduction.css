@@ -207,3 +207,18 @@
 .wide-card {
   grid-column: span 2;
 }
+
+/* Hover sencillo: fondo azul suave y texto blanco */
+.epidemiology-card:hover {
+  background-color: #3b82f6; /* azul más suave */
+  color: #ffffff; /* todo el texto en blanco */
+  transform: translateY(-5px); /* pequeña elevación */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.epidemiology-card:hover .card-icon,
+.epidemiology-card:hover h3,
+.epidemiology-card:hover p,
+.epidemiology-card:hover .highlight {
+  color: #ffffff; /* icono y texto en blanco */
+}
